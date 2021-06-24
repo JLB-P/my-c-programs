@@ -4,6 +4,8 @@
 
 io_ports.c
 
+lcd_4b.c
+
 leds.c
 
 main.c

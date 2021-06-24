@@ -8,6 +8,6 @@
 
 #ifndef LEDS_H_
 #define LEDS_H_
-void led_on_off (void);
+void power_on (void);
 
 #endif /* LEDS_H_ */
