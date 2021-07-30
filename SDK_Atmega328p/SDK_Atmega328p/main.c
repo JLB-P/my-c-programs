@@ -9,23 +9,36 @@
 #include <avr/io.h>
 #include "io_ports.h"
 #include "leds.h"
-#include "lcd_4b.h"
-
+#include "lcd_i2c.h"
+#include "int0.h"
+#include "comp.h"
 
 int main(void)
 {
     /* Replace with your application code */
+
 	init_ports();
-	power_on(); //LED para indicar que el programa esta funcionando en arduino
+	
+	power_on(); //LED para indicar que el programa esta funcionando
+		
 	/************************************************************************
-	* uso del lcd en modo de 4 bits
+	* USO DEL LCD CON I2C
 	************************************************************************/
-	lcd_init();
-	lcd_col_row(3,1);
-	lcd_write_string("hola lcd");
+	lcd_i2c_init();
+	lcd_i2c_col_row(3,1);
+	lcd_i2c_write_string("hola lcd i2c");
+	/************************************************************************
+	* USO DE INTERRUPCIONES EXTERNAS
+	************************************************************************/
+	init_INT0();
+	/************************************************************************
+	* USO DE COMPARADOR
+	************************************************************************/
+	init_comp();
+	
     while (1) 
     {
-
+	
     }
 }
 

@@ -9,16 +9,19 @@ void init_ports (void)
 {
 	// Define puerto B-->salida
 	DDRB = 0xff;
-	/*LCD de prueba a 4 bits
-		Atmega328p  
-		PB0			RS
-		PB1			RW
-		PB2			E
-		PB4			D4
-		PB5			D5
-		PB6			D6
-		PB7			D7
+	/*Port B definition
+		PB0			
+		PB1			
+		PB2			
+		PB4			
+		PB5			Power on LED
+		PB6			
+		PB7			
 	*/
-	//Port B definition
-	//DDRB |= 1 << PB5; //arduino led on pb5
+	DDRD &= 0 << PD2; //entrada de interrupci[on externa
+	PORTD |= 1 << PD2; //activa resistencia de PullUp.
+	
+	// Salidas para interfaz a 2 hilos TWI
+	DDRC|=(1<<PC4)|(1<<PC5);	// Como salida SDA y SCL
+	PORTC|=(1<<PC4)|(1<<PC5);	// SDA y SCL con pull up.
 }

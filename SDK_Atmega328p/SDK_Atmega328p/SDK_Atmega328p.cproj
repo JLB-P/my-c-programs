@@ -133,16 +133,34 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="comp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="i2c.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="int0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="int0.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="io_ports.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="io_ports.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="lcd_4b.c">
+    <Compile Include="lcd_i2c.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="lcd_4b.h">
+    <Compile Include="lcd_i2c.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="leds.c">
