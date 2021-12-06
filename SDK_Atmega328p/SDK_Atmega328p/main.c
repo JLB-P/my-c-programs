@@ -12,6 +12,7 @@
 #include "lcd_i2c.h"
 #include "int0.h"
 #include "comp.h"
+#include "adc.h"
 
 int main(void)
 {
@@ -25,20 +26,26 @@ int main(void)
 	* USO DEL LCD CON I2C
 	************************************************************************/
 	lcd_i2c_init();
-	lcd_i2c_col_row(3,1);
-	lcd_i2c_write_string("hola lcd i2c");
+	lcd_i2c_col_row(1,1);
+	lcd_i2c_write_string("Inicia LCD... ");
 	/************************************************************************
 	* USO DE INTERRUPCIONES EXTERNAS
 	************************************************************************/
-	init_INT0();
+	//init_INT0();
 	/************************************************************************
 	* USO DE COMPARADOR
 	************************************************************************/
-	init_comp();
-	
+	//init_comp();
+	/************************************************************************
+	* USO DEL ADC CON SENSOR DE TEMPERATURA LM35 E INTERRUPCIONES
+	************************************************************************/
+	lcd_i2c_clr();	//limpia LCD
+	lcd_i2c_col_row(4,1);
+	lcd_i2c_write_string("TEMP:");
+	ADC_WithInterrupt();
     while (1) 
     {
-	
+	 
     }
 }
 

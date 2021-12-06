@@ -5,7 +5,6 @@
  *  Author: jlb
  */ 
 
-#define F_CPU 16000000UL //arduino freq.
 #include <avr/io.h>
 #include <util/delay.h>
 #include "i2c.h"

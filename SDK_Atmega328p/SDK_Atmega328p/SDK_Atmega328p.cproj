@@ -106,6 +106,7 @@
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
             <Value>DEBUG</Value>
+            <Value>F_CPU=16000000</Value>
           </ListValues>
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
@@ -133,6 +134,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="adc.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="comp.c">
       <SubType>compile</SubType>
     </Compile>

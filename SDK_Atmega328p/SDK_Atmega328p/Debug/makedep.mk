@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+adc.c
+
 comp.c
 
 i2c.c

@@ -4,7 +4,6 @@
  * Created: 6/29/2021 7:38:17 PM
  *  Author: jlb
  */
-#define F_CPU 16000000UL //arduino freq.
 #include <avr/io.h>
 #include <util/delay.h>
 #include "i2c.h"
@@ -161,23 +160,23 @@ void lcd_i2c_write_string(char *a)
 *	Entrada: Valor a imprimir, longitud del valor a imprimir (1 a 5)
 *	Salida: Ninguna
 *********************************************************/
-void lcd_i2c_WriteInt(int val,unsigned int field_length)
+void lcd_i2c_write_int(int value,unsigned int field_length)
 {
 	char str[5]={0,0,0,0,0};
 	int i=4,j=0;
-	while(val)
-	{
-		str[i]=val%10;
-		val=val/10;
-		i--;
-	}
+	while(value)
+		{
+			str[i]=value%10;
+			value=value/10;
+			i--;
+		}
 	if(field_length==-1)
 	while(str[j]==0) j++;
-	else
-	j=5-field_length;
-	if(val<0) lcd_i2c_data('-');
+	else  
+		j=5-field_length;
+	if(value<0) lcd_i2c_data('-');
 	for(i=j;i<5;i++)
-	{
-		lcd_i2c_data(48+str[i]);
-	}
+		{
+			lcd_i2c_data(48+str[i]);
+		}
 }
