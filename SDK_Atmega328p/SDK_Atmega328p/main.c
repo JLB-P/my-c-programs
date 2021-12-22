@@ -5,7 +5,6 @@
  * Author : jlb
  */ 
 
-
 #include <avr/io.h>
 #include "io_ports.h"
 #include "leds.h"
@@ -13,6 +12,7 @@
 #include "int0.h"
 #include "comp.h"
 #include "adc.h"
+#include "rtc_1307.h"
 
 int main(void)
 {
@@ -25,9 +25,9 @@ int main(void)
 	/************************************************************************
 	* USO DEL LCD CON I2C
 	************************************************************************/
-	lcd_i2c_init();
-	lcd_i2c_col_row(1,1);
-	lcd_i2c_write_string("Inicia LCD... ");
+// 	lcd_i2c_init();
+// 	lcd_i2c_col_row(1,1);
+//	lcd_i2c_write_string("Inicia LCD... ");
 	/************************************************************************
 	* USO DE INTERRUPCIONES EXTERNAS
 	************************************************************************/
@@ -39,11 +39,16 @@ int main(void)
 	/************************************************************************
 	* USO DEL ADC CON SENSOR DE TEMPERATURA LM35 E INTERRUPCIONES
 	************************************************************************/
-	lcd_i2c_clr();	//limpia LCD
-	lcd_i2c_col_row(4,1);
-	lcd_i2c_write_string("TEMP:");
-	ADC_WithInterrupt();
-    while (1) 
+// 	lcd_i2c_clr();	//limpia LCD
+// 	lcd_i2c_col_row(4,1);
+// 	lcd_i2c_write_string("TEMP:");
+//	ADC_WithInterrupt();
+	/************************************************************************
+	* USO DEL RTC CON I2C
+	************************************************************************/
+	rtc_example();
+    
+	while (1) 
     {
 	 
     }
