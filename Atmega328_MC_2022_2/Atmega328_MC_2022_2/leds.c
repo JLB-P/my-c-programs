@@ -9,7 +9,7 @@
  
 void power_led_on_off(int i)
 {
-	for (i = 0; i < 5; ++i)
+	for (i = 0; i < 6; ++i)
 	{
 		PORTB ^= 1 << PINB5; //toggle
 		_delay_ms(100);	

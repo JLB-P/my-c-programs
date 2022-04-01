@@ -15,6 +15,8 @@ int main(void)
 	init_ports();
 	power_led_on_off();
 	init_usart(207);
+	usart_transmit_string("Hola Jesus...");
+	
 	/* Replace with your application code */
 	while (1)
 	{

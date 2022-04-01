@@ -2,20 +2,65 @@
  * usart.c
  *
  * Created: 3/22/2022 6:49:28 PM
- *  Author: josel
+ *  Author: jlb
  */ 
-/******************************************************************************
-* Inicializa el USART
-* Entrada: valor de UBRR de las tablas de BAUDRATE
-*
-*******************************************************************************/
+#include <avr/io.h>
+#include <util/delay.h>
 #include <avr/interrupt.h>
+#include "usart.h"
 
+//Global variables
+volatile char USART_received_char;
 
+/*
+* Rutina de atención a las interrupciones del USART
+*/
+ISR (USART_RX_vect)
+{
+	USART_received_char=UDR0;
+	usart_transmit(0x40); //Transmite una "A" y luego el caracter tecleado
+	usart_transmit(USART_received_char);
+}
+
+/*
+* Lee el byte que llega por el receptor
+*/
+unsigned char usart_receive( void )
+{
+  while ((UCSR0A & 0x80) == 0x00); // Espera por un dato (RXC=1)
+  return UDR0;
+}
+
+/*
+* Transmite el dato que se pasa como argumento
+*/
+void usart_transmit( uint8_t data )
+{
+  while ((UCSR0A & 0x20) == 0x00);  // Espera hasta que el buffer del transmisor está vacío (UDRE=1)
+  UDR0 = data; // Cuando el buffer está vacío, coloca el dato en el registro UDR
+}
+
+/*
+	Transmite una cadena de caracteres
+*/
+void usart_transmit_string( char s[] )
+{	
+	int i = 0;
+  while (i < 64)
+  {
+	  if (s[i] == '\0') break;
+	  usart_transmit(s[i++]);
+  }
+}
+
+/*
+* Inicializa USART
+* Entrada: valor de UBRR de las tablas(datasheet)de BAUDRATE
+*/
 void init_usart(unsigned int baudrate)
 {
 	//Escoge modo de reloj: UMSEL=0 asíncrono, UMSEL=1 síncrono
-	UCSR0C &= ~(1<<UMSEL00 | 1<<UMSEL01); // bit UMSEL = 0 asíncrono
+	UCSR0C &= (~(1<<UMSEL00) & ~(1<<UMSEL01)); // bit UMSEL = 0 asíncrono
 	
 	//En modo asíncrono escoge la velocidad: U2X=0 normal, U2X=1 doble
 	UCSR0A = (1<<U2X0); // bit U2X = 1 doble
