@@ -10,16 +10,16 @@
 #include "usart.h"
 
 //Global variables
-volatile char USART_received_char;
+volatile char usart_received_char;
 
 /*
 * Rutina de atención a las interrupciones del USART
 */
 ISR (USART_RX_vect)
 {
-	USART_received_char=UDR0;
+	usart_received_char=UDR0;
 	usart_transmit(0x40); //Transmite una "A" y luego el caracter tecleado
-	usart_transmit(USART_received_char);
+	usart_transmit(usart_received_char);
 }
 
 /*

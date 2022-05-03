@@ -16,3 +16,27 @@ void power_led_on_off(int i)
 	}
 	
 }
+
+void led_on(char color)
+{
+	switch (color)
+	{
+		case 'R':
+			PORTB &= 0 << PINB0;
+			PORTB |= 1 << PINB1;
+			PORTB |= 1 << PINB2;	
+			break;
+		case 'V':
+			PORTB &= 0 << PINB1;
+			PORTB |= 1 << PINB0;
+			PORTB |= 1 << PINB2;
+			break;
+		case 'A':
+			PORTB &= 0 << PINB2;
+			PORTB |= 1 << PINB0;
+			PORTB |= 1 << PINB1;
+			break;
+		default:
+		;
+	}
+}
