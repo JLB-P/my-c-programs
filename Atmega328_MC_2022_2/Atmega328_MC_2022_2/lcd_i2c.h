@@ -9,7 +9,7 @@
 #ifndef LCD_I2C_H_
 #define LCD_I2C_H_
 
-#define PCF8574_ADDR	0x70		//Dirección del dispositivo:
+#define PCF8574_ADDR	0x4E		//Dirección del dispositivo:
 // PCF8574 es 0x20, desplazada una posición a la izq. es 0x40
 // PCF8574A es 0x38, desplzadad una posición a la izq. es 0x70
 

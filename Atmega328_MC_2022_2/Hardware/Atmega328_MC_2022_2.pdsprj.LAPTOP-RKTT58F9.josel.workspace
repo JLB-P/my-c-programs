@@ -32,13 +32,13 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="286" flags="00008023" y="214" h="250" pid="0" iid="28">
+   <POPUP w="450" x="286" flags="00000022" y="214" h="250" pid="0" iid="28">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="226" x="816" flags="00000008" y="197" h="215" pid="3" iid="1">
+   <POPUP w="30" x="816" flags="00000008" y="197" h="16" pid="3" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="836" flags="0000000a" y="217" h="1" pid="10" iid="1">
@@ -101,7 +101,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="38" flags="00000023" y="129" h="250" pid="0" iid="19">
+   <POPUP w="450" x="38" flags="00000022" y="129" h="250" pid="0" iid="19">
     <PROPERTIES>
      <ITEM name="ComboBox1000">S</ITEM>
      <ITEM name="ComboBox1001">Sr</ITEM>
@@ -129,6 +129,12 @@
      <ITEM name="ShowToolTips">Yes</ITEM>
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
+   </POPUP>
+   <POPUP w="20" x="106" flags="00000000" y="190" h="3" pid="1" iid="20">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="126" flags="00000008" y="210" h="8" pid="2" iid="20">
+    <PROPERTIES/>
    </POPUP>
   </PWI>
  </MODULE>
