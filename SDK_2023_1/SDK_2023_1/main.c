@@ -7,13 +7,16 @@
 
 #include <avr/io.h>
 #include "ports.h"
+#include "leds.h"
 
 int main(void)
 {
 	init_ports();
+	
     /* Replace with your application code */
     while (1) 
     {
+		led_on_off();
     }
 }
 

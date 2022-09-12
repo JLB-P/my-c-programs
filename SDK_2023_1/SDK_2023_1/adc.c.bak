@@ -14,7 +14,7 @@
 * conjunta. La primera inicia el ADC y la segunda se debe llamar cada
 * vez que se quiere leer un dato del ADC.
 ************************************************************************/
-void init_adc_nointerrupt(void)
+void ADC_WithoutInterrupt(void)
 {
 	ADMUX=(1<<REFS0);		//Selecciona el voltaje de referencia REF1=0, REFS0=1
 								//(AVCC with external capacitor at AREF pin)
@@ -25,7 +25,7 @@ void init_adc_nointerrupt(void)
 												//fo=1,000,000/128 ~ 7Khz
 }
 
-uint16_t read_adc(void)
+uint16_t Read_ADC(void)
 {
 	//Seleccciona el canal del ADC (entre 0-5)
 	ADMUX &=0b11111000;
@@ -74,7 +74,7 @@ ISR (ADC_vect)
 }
 /***Fin de rutina***/
 
-void init_adc_interrupt(void)
+void ADC_WithInterrupt(void)
 {
 	//Habilita el convertidor (encenderlo)
 	ADCSRA |= 1<<ADEN;

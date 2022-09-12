@@ -1,12 +1,16 @@
-/*
- * adc.h
+﻿/*
+ * ADC.h
  *
- * Created: 29/11/2021 03:57:36 p. m.
- *  Author: JOSELUISBARBOSAPACHE
+ * Created: 15/03/2016 08:05:14 a. m.
+ *  Author: JLB
  */ 
 
 
 #ifndef ADC_H_
 #define ADC_H_
-void ADC_WithInterrupt(void);
+
+void init_adc_nointerrupt(void);
+uint16_t read_adc(void);
+init_adc_interrupt(void);
+
 #endif /* ADC_H_ */
