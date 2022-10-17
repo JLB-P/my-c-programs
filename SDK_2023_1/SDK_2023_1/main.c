@@ -12,11 +12,12 @@
 int main(void)
 {
 	init_ports();
+	led_on_off();
 	
     /* Replace with your application code */
     while (1) 
     {
-		led_on_off();
+		
     }
 }
 
