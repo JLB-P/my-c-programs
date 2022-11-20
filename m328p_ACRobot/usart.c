@@ -60,7 +60,7 @@ void USART_transmit_string( char s[] )
 void init_usart(unsigned int baudrate)
 {
 	//Escoge modo de reloj: UMSEL00 & UMSEL01 =0 asíncrono, UMSEL00=1 síncrono
-	UCSR0C &= (~(1<<UMSEL00) & ~(1<<UMSEL00));
+	UCSR0C &= (~(1<<UMSEL00) & ~(1<<UMSEL01));
 	
 	//En modo asíncrono escoge la velocidad: U2X=0 normal, U2X=1 doble
 	UCSR0A = (1 << U2X0); // bit U2X = 1 doble

@@ -65,7 +65,7 @@ int main(void)
 		
 		//PID Algorithm generates a control variable from the current value
 		//and the required value. Since the aim is to keep the line always
-		//beneath the center sensor so the required value is 2.5 (second parameter)
+		//beneath the center sensor so the required value is 3.5 (second parameter)
 		//The first argument is the current sensor reading.
 		//The more the difference between the two greater is the control variable.
 		//This control variable is used to produce turning in the robot.

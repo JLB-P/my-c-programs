@@ -27,7 +27,7 @@ int main(void)
  	lcd_i2c_col_row(1,1);
 	lcd_i2c_write_string("Listo...");
 	lcd_i2c_col_row(1,2);
-	lcd_i2c_write_string("ya funciona! ");
+	lcd_i2c_write_string("reprobada! ");
 	/* Sensor de temperatura LM35 conectado al ADC
 		con manejo de interrupciones */
 	

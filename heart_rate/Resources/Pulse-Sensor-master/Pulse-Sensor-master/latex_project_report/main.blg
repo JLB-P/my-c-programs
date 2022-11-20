@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: biblist.bib
+Warning--to sort, need author or key in PPG_meaning
+Warning--to sort, need author or key in epson_sensor
+Warning--to sort, need author or key in analomy_pulse_sensor
+Warning--to sort, need author or key in avr_analog
+Warning--to sort, need author or key in atmega32_datasheet
+You've used 6 entries,
+            2118 wiz_defined-function locations,
+            522 strings with 5021 characters,
+and the built_in function-call counts, 1073 in all, are:
+= -- 106
+> -- 12
+< -- 0
++ -- 8
+- -- 2
+* -- 32
+:= -- 140
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 42
+empty$ -- 138
+format.name$ -- 2
+if$ -- 258
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 0
+newline$ -- 34
+num.names$ -- 2
+pop$ -- 60
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 30
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 5
+while$ -- 2
+width$ -- 7
+write$ -- 58
+(There were 5 warnings)

@@ -1039,7 +1039,7 @@ int main(void)
  5dc:	d0 92 19 01 	sts	0x0119, r13	; 0x800119 <s+0x1>
  5e0:	e0 92 1a 01 	sts	0x011A, r14	; 0x80011a <s+0x2>
  5e4:	f0 92 1b 01 	sts	0x011B, r15	; 0x80011b <s+0x3>
-		//beneath the center sensor so the required value is 2.5 (second parameter)
+		//beneath the center sensor so the required value is 3.5 (second parameter)
 		//The first argument is the current sensor reading.
 		//The more the difference between the two greater is the control variable.
 		//This control variable is used to produce turning in the robot.
@@ -1327,8 +1327,8 @@ void motor_right(uint8_t dir,uint8_t speed)
  7dc:	0e 94 aa 04 	call	0x954	; 0x954 <__divsf3>
  7e0:	20 e0       	ldi	r18, 0x00	; 0
  7e2:	30 e0       	ldi	r19, 0x00	; 0
- 7e4:	46 e1       	ldi	r20, 0x16	; 22
- 7e6:	53 e4       	ldi	r21, 0x43	; 67
+ 7e4:	4c e0       	ldi	r20, 0x0C	; 12
+ 7e6:	52 e4       	ldi	r21, 0x42	; 66
  7e8:	0e 94 09 06 	call	0xc12	; 0xc12 <__mulsf3>
  7ec:	0e 94 23 05 	call	0xa46	; 0xa46 <__fixunssfsi>
  7f0:	70 e0       	ldi	r23, 0x00	; 0
@@ -1412,8 +1412,8 @@ void motor_left(uint8_t dir,uint8_t speed)
  84c:	0e 94 aa 04 	call	0x954	; 0x954 <__divsf3>
  850:	20 e0       	ldi	r18, 0x00	; 0
  852:	30 e0       	ldi	r19, 0x00	; 0
- 854:	46 e1       	ldi	r20, 0x16	; 22
- 856:	53 e4       	ldi	r21, 0x43	; 67
+ 854:	4c e0       	ldi	r20, 0x0C	; 12
+ 856:	52 e4       	ldi	r21, 0x42	; 66
  858:	0e 94 09 06 	call	0xc12	; 0xc12 <__mulsf3>
  85c:	0e 94 23 05 	call	0xa46	; 0xa46 <__fixunssfsi>
  860:	70 e0       	ldi	r23, 0x00	; 0

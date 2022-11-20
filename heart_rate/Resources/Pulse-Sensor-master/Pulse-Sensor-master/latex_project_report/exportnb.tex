@@ -1,0 +1,59 @@
+%% AMS-LaTeX Created with the Wolfram Language : www.wolfram.com
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicapage}
+\begin{document}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Clear}[\text{{``}Global$\grave{ }$*{''}}];}\\
+\pmb{\omega =2000 ;}\\
+\pmb{\text{c1}[\zeta \_]\text{:=}-\zeta  \omega  + \omega  \sqrt{\zeta ^2-1};}\\
+\pmb{\text{c2}[\zeta \_]\text{:=}-\zeta  \omega  - \omega \sqrt{\zeta ^2-1};}\\
+\pmb{H[\zeta \_]\text{:=}\frac{\omega ^2}{(s-\text{c1}[\zeta ])(s-\text{c2}[\zeta ])};}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{StepR}[\text{t$\_$},\zeta \_]\text{:=}\frac{\omega ^2}{(\text{c1}[\zeta ]-\text{c2}[\zeta ])}*\left(\frac{e^{\text{c1}[\zeta
+]t}-1}{\text{c1}[\zeta ]}-\frac{e^{\text{c2}[\zeta ]t}-1}{\text{c2}[\zeta ]}\right) }\\
+\pmb{\text{(*} \text{Unit} \text{Impulse} \text{Integrated} \text{by} \text{hand} \to  \text{Unit} \text{step} \text{Response} \text{*)}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{H1}=\frac{\omega ^2}{(s+ \omega )^2} \text{(*} \text{Transfer} \text{function} \text{when} \zeta =1 \text{*)}}\\
+\pmb{\text{(*} \text{Relevant} \text{Time} \text{Domain} \text{Function} \to  t*e^{-\text{$\omega $t}}*u(t) \text{StepR1} \text{means} \text{the}
+\text{Integral} \text{of} \text{it} \text{as} \text{below} \text{*)}}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{StepR1}[\text{t$\_$}]\text{:=}\omega ^2\int _0^t\tau *\text{Exp}[-\omega  \tau ]*\text{UnitStep}[\tau ]d\tau  }\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Plot}[\{\text{StepR}[t,0.25],\text{StepR}[t,0.5],\text{StepR}[t,0.75],\text{StepR1}[t],\text{StepR}[t,1.5]\},}\\
+\pmb{\{t,0,0.010\},\text{PlotRange}\to \text{All},\text{PlotLegends}\to \text{{``}Expressions{''}}]}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\begin{array}{cc}
+  &  \\
+\end{array}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Manipulate}[\text{Control$\grave{ }$PoleZeroPlot}[\{H[\zeta ]\},}\\
+\pmb{\text{PlotLabel}\to \text{StringForm}[\text{{``}Pole Zero Plot for $\zeta $ = $\grave{ }$1$\grave{ }${''}},\zeta ],}\\
+\pmb{\text{PlotLegends}\to \text{StringForm}[\text{{``}$\zeta $ = $\grave{ }$1$\grave{ }$ {''}},\zeta ],\text{AxesLabel}\to \{\text{{``}Re{''}},\text{{``}Im{''}}\}],\{\{\zeta
+,0.5\},0,1\}]}\)
+
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\)
+\end{doublespace}
+
+\end{document}

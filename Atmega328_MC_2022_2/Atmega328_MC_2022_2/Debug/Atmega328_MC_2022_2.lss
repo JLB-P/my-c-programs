@@ -3,31 +3,31 @@ Atmega328_MC_2022_2.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         0000001c  00800100  00000afe  00000b92  2**0
+  0 .data         0000001a  00800100  00000afe  00000b92  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   1 .text         00000afe  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000001  0080011c  0080011c  00000bae  2**0
+  2 .bss          00000001  0080011a  0080011a  00000bac  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000bae  2**0
+  3 .comment      00000030  00000000  00000000  00000bac  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000be0  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000bdc  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000168  00000000  00000000  00000c20  2**0
+  5 .debug_aranges 00000168  00000000  00000000  00000c1c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001535  00000000  00000000  00000d88  2**0
+  6 .debug_info   00001535  00000000  00000000  00000d84  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000bc6  00000000  00000000  000022bd  2**0
+  7 .debug_abbrev 00000bc6  00000000  00000000  000022b9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000bbc  00000000  00000000  00002e83  2**0
+  8 .debug_line   00000bbc  00000000  00000000  00002e7f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000318  00000000  00000000  00003a40  2**2
+  9 .debug_frame  00000318  00000000  00000000  00003a3c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000579  00000000  00000000  00003d58  2**0
+ 10 .debug_str    00000579  00000000  00000000  00003d54  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000b39  00000000  00000000  000042d1  2**0
+ 11 .debug_loc    00000b39  00000000  00000000  000042cd  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000000f8  00000000  00000000  00004e0a  2**0
+ 12 .debug_ranges 000000f8  00000000  00000000  00004e06  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -204,13 +204,13 @@ Disassembly of section .text:
  178:	02 c0       	rjmp	.+4      	; 0x17e <__do_copy_data+0x10>
  17a:	05 90       	lpm	r0, Z+
  17c:	0d 92       	st	X+, r0
- 17e:	ac 31       	cpi	r26, 0x1C	; 28
+ 17e:	aa 31       	cpi	r26, 0x1A	; 26
  180:	b1 07       	cpc	r27, r17
  182:	d9 f7       	brne	.-10     	; 0x17a <__do_copy_data+0xc>
 
 00000184 <__do_clear_bss>:
  184:	21 e0       	ldi	r18, 0x01	; 1
- 186:	ac e1       	ldi	r26, 0x1C	; 28
+ 186:	aa e1       	ldi	r26, 0x1A	; 26
  188:	b1 e0       	ldi	r27, 0x01	; 1
  18a:	01 c0       	rjmp	.+2      	; 0x18e <.do_clear_bss_start>
 
@@ -218,7 +218,7 @@ Disassembly of section .text:
  18c:	1d 92       	st	X+, r1
 
 0000018e <.do_clear_bss_start>:
- 18e:	ad 31       	cpi	r26, 0x1D	; 29
+ 18e:	ab 31       	cpi	r26, 0x1B	; 27
  190:	b2 07       	cpc	r27, r18
  192:	e1 f7       	brne	.-8      	; 0x18c <.do_clear_bss_loop>
  194:	0e 94 52 02 	call	0x4a4	; 0x4a4 <main>
@@ -822,7 +822,7 @@ int main(void)
  4c4:	62 e0       	ldi	r22, 0x02	; 2
  4c6:	81 e0       	ldi	r24, 0x01	; 1
  4c8:	0e 94 12 02 	call	0x424	; 0x424 <lcd_i2c_col_row>
-	lcd_i2c_write_string("ya funciona! ");
+	lcd_i2c_write_string("reprobada! ");
  4cc:	8d e0       	ldi	r24, 0x0D	; 13
  4ce:	91 e0       	ldi	r25, 0x01	; 1
  4d0:	0e 94 26 02 	call	0x44c	; 0x44c <lcd_i2c_write_string>
@@ -880,12 +880,12 @@ ISR (USART_RX_vect)
  50c:	ff 93       	push	r31
 	usart_received_char=UDR0;
  50e:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7f80c6>
- 512:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <__data_end>
+ 512:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <__data_end>
 	usart_transmit(0x40); //Transmite una "A" y luego el caracter tecleado
  516:	80 e4       	ldi	r24, 0x40	; 64
  518:	0e 94 6f 02 	call	0x4de	; 0x4de <usart_transmit>
 	usart_transmit(usart_received_char);
- 51c:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 51c:	80 91 1a 01 	lds	r24, 0x011A	; 0x80011a <__data_end>
  520:	0e 94 6f 02 	call	0x4de	; 0x4de <usart_transmit>
 }
  524:	ff 91       	pop	r31

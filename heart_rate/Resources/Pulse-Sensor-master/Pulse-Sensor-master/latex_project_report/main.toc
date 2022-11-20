@@ -1,0 +1,26 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}
+\contentsline {section}{\numberline {2}Acknowledgement}{1}{section.2}
+\contentsline {section}{\numberline {3}Introduction}{3}{section.3}
+\contentsline {section}{\numberline {4}Methodology}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Sensor - (principle)}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Amplification and Filtering}{5}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Calculations}{5}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {4.3}Calculating BPM from the analog signal}{7}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Microcontroller}{7}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Obtaining a threshold value}{8}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Least Squares Regression Line }{9}{subsubsection.4.3.3}
+\contentsline {subsection}{\numberline {4.4}Enclosure and PCB Design}{11}{subsection.4.4}
+\contentsline {section}{\numberline {5}Implementation and Results}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}The effect of noise on the signal}{13}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Without the filter - Dominant 50Hz noise}{13}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}With the active bandpass filter}{14}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Obtaining a threshold value}{16}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Accuracy Measurement}{17}{subsubsection.5.1.4}
+\contentsline {section}{\numberline {6}Discussion}{18}{section.6}
+\contentsline {section}{\numberline {7}Our repository}{19}{section.7}
+\contentsline {section}{\numberline {8}Appendices - }{21}{section.8}
+\contentsline {subsection}{\numberline {8.1}MCU Sourcecode in C}{21}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Mathematica Simulations}{26}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}MCU Schematic}{28}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}ATmega32 Datasheet - Summary}{29}{subsection.8.4}
