@@ -1,0 +1,20 @@
+{  
+    "cSpell.enabled": true,
+    "editor.cursorBlinking": "solid",
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    "editor.wrappingIndent": "same",
+    "latex-workshop.debug.showUpdateMessage": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.autoBuild.onSave.enabled": true,
+    "spellright.language": [
+      "en"
+    ],
+    "spellright.documentTypes": [
+      "markdown",
+      "latex",
+      "plaintext"
+    ]
+  }
