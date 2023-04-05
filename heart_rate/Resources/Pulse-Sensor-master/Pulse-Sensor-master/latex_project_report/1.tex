@@ -1,0 +1,54 @@
+%% AMS-LaTeX Created with the Wolfram Language : www.wolfram.com
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicapage}
+\begin{document}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{data}=\{\{1,347\},\{2,264\},\{3,264\},\{4,308\},\{5,316\},\{6,264\},\{7,264\},\{8,376\},\{9,264\},}\\
+\pmb{\{10,264\},\{11,264\},\{12,470\},\{13,313\},\{14,264\},\{15,264\},\{16,316\},\{17,264\},\{18,264\},}\\
+\pmb{\{19,322\},\{20,264\},\{21,264\},\{22,264\},\{23,331\},\{24,264\},\{25,264\},\{26,264\},\{27,317\},}\\
+\pmb{\{28,264\},\{29,264\},\{30,264\},\{31,322\},\{32,264\},\{33,264\},\{34,363\},\{35,264\},\{36,264\},}\\
+\pmb{\{37,264\},\{38,387\},\{39,264\},\{40,264\},\{41,272\},\{42,342\},\{43,264\},\{44,264\},\{45,347\},}\\
+\pmb{\{46,264\},\{47,264\},\{48,264\},\{49,340\},\{50,264\}\};}\\
+\pmb{\text{lm}=\text{LinearModelFit}[\text{data},x,x];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Show}[\text{ListLinePlot}[\text{data},\text{PlotStyle}\to \text{Blue},\text{PlotMarkers}\to \{\text{Automatic}, 6\},\text{GridLines}\to
+\text{Automatic}],}\\
+\pmb{\text{Plot}[\text{lm}[x],\{x,0,50\},\text{PlotStyle}\to \text{Red}],\text{AxesLabel}\to \{\text{{``}X - Time{''}},\text{{``}Y - PPG Analog Reading
+(0-1023){''}}\},}\\
+\pmb{\text{PslotLabel}\to \text{lm}[\text{{``}BestFit{''}}]]}\)
+\end{doublespace}
+
+\includegraphics{1_gr1.eps}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{data2}=\{\{1,265\},\{2,471\},\{3,264\},\{4,264\},\{5,574\},\{6,264\},\{7,264\},\{8,264\},\{9,640\},}\\
+\pmb{\{10,264\},\{11,264\},\{12,264\},\{13,558\},\{14,275\},\{15,264\},\{16,264\},\{17,440\},\{18,264\},}\\
+\pmb{\{19,264\},\{20,264\},\{21,450\},\{22,264\},\{23,265\},\{24,264\},\{25,466\},\{26,264\},\{27,264\},}\\
+\pmb{\{28,264\},\{29,487\},\{30,264\},\{31,264\},\{32,264\},\{33,476\},\{34,280\},\{35,264\},\{36,264\},}\\
+\pmb{\{37,446\},\{38,264\},\{39,264\},\{40,264\},\{41,338\},\{42,434\},\{43,265\},\{44,264\},\{45,303\},}\\
+\pmb{\{46,333\},\{47,264\},\{48,264\},\{49,307\},\{50,264\}\};}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{lm2}=\text{LinearModelFit}[\text{data2},x,x];}\)
+\end{doublespace}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Show}[\text{ListLinePlot}[\text{data2},\text{PlotStyle}\to \text{Blue},\text{PlotMarkers}\to \{\text{Automatic}, 6\},\text{PlotRange}\to
+\{250,650\},}\\
+\pmb{\text{GridLines}\to \text{Automatic}],\text{Plot}[\text{lm2}[x],\{x,0,50\},\text{PlotStyle}\to \text{Red}],}\\
+\pmb{\text{AxesLabel}\to \{\text{{``}X - Time{''}},\text{{``}Y - PPG Analog Reading (0-1023){''}}\},\text{PslotLabel}\to \text{lm}[\text{{``}BestFit{''}}]]}\)
+\end{doublespace}
+
+\includegraphics{1_gr2.eps}
+
+\end{document}
