@@ -129,7 +129,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="1214" x="-6009" flags="00008001" y="48" h="914" pid="0" iid="2">
+   <POPUP w="1384" x="-6009" flags="00008001" y="48" h="888" pid="0" iid="2">
     <PROPERTIES/>
    </POPUP>
   </PWI>

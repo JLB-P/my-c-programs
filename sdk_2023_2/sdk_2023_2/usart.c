@@ -18,7 +18,7 @@ volatile char usart_received_char;
 ISR (USART_RX_vect)
 {
 	usart_received_char=UDR0;
-	usart_transmit(0x40); //Transmite una "A" y luego el caracter tecleado
+	usart_transmit(0x41); //Transmite una "A" y luego el caracter tecleado
 	usart_transmit(usart_received_char);
 }
 
