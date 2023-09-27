@@ -8,12 +8,14 @@
 #include <avr/io.h>
 #include "ports.h"
 #include "leds.h"
+#include "comp.h"
 
 int main(void)
 {
     /* Replace with your application code */
 	init_ports();
 	led_on_off();
+	init_ana_comp();
     while (1) 
     {
 		

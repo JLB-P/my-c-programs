@@ -8,6 +8,7 @@
 
 #ifndef COMP_H_
 #define COMP_H_
+void init_ana_comp(void);
 
 
 
