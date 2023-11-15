@@ -1,0 +1,45 @@
+<circuit type="simulide_1.0" rev="1007" stepSize="1000000" stepsPS="1000000" NLsteps="100000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="596,544" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../sdk_2024_1/Debug/sdk_2024_1.hex" Auto_Load="true" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Led" CircId="Led-2" mainComp="false" Show_id="false" Show_Val="false" Pos="680,624" rotation="0" hflip="1" vflip="1" label="Led-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="712,668" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-16" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="452,592" rotation="0" hflip="1" vflip="1" label="Potentiometer-16" idLabPos="-16,-40" labelrot="0" valLabPos="-10,-41" valLabRot="0" Resistance="5 kΩ" Value_Ohm="1105 Ω" />
+
+<item itemtype="Battery" CircId="Battery-27" mainComp="false" Show_id="false" Show_Val="false" Pos="464,648" rotation="0" hflip="-1" vflip="1" label="Battery-27" idLabPos="-18,-22" labelrot="0" valLabPos="-10,10" valLabRot="0" Voltage="3.3 V" />
+
+<item itemtype="Ground" CircId="Ground-29" mainComp="false" Show_id="false" Show_Val="false" Pos="428,680" rotation="0" hflip="1" vflip="1" label="Ground-29" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Battery" CircId="Battery-42" mainComp="false" Show_id="false" Show_Val="false" Pos="452,524" rotation="0" hflip="-1" vflip="1" label="Battery-42" idLabPos="-18,-22" labelrot="0" valLabPos="-10,10" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Probe" CircId="Probe-77" mainComp="false" Show_id="false" Show_Val="true" Pos="524,592" rotation="-45" hflip="1" vflip="1" label="Probe-77" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-92" mainComp="false" Show_id="false" Show_Val="true" Pos="520,632" rotation="-45" hflip="1" vflip="1" label="Probe-92" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Node" CircId="Node-90" mainComp="false" Pos="428,592" />
+
+<item itemtype="Node" CircId="Node-94" mainComp="false" Pos="428,648" />
+
+<item itemtype="Connector" uid="connector-95" startpinid="Led-2-lPin" endpinid="mega328-1-PORTB5" pointList="664,624,636,624" />
+
+<item itemtype="Connector" uid="connector-96" startpinid="Led-2-rPin" endpinid="Ground-4-Gnd" pointList="696,624,712,624,712,652" />
+
+<item itemtype="Connector" uid="connector-97" startpinid="mega328-1-PORTD6" endpinid="Potentiometer-16-PinM" pointList="588,640,556,640,556,608,452,608" />
+
+<item itemtype="Connector" uid="connector-98" startpinid="Potentiometer-16-PinA" endpinid="Node-90-0" pointList="436,592,428,592" />
+
+<item itemtype="Connector" uid="connector-99" startpinid="Battery-42-lPin" endpinid="Potentiometer-16-PinB" pointList="468,524,484,524,484,592,468,592" />
+
+<item itemtype="Connector" uid="connector-100" startpinid="Battery-42-rPin" endpinid="Node-90-1" pointList="436,524,428,524,428,592" />
+
+<item itemtype="Connector" uid="connector-101" startpinid="Node-90-2" endpinid="Node-94-0" pointList="428,592,428,648" />
+
+<item itemtype="Connector" uid="connector-102" startpinid="Battery-27-rPin" endpinid="Node-94-1" pointList="448,648,428,648" />
+
+<item itemtype="Connector" uid="connector-103" startpinid="Node-94-2" endpinid="Ground-29-Gnd" pointList="428,648,428,664" />
+
+<item itemtype="Connector" uid="connector-104" startpinid="Battery-27-lPin" endpinid="mega328-1-PORTD7" pointList="480,648,588,648" />
+
+</circuit>
