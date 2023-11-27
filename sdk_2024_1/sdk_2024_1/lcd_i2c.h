@@ -10,8 +10,6 @@
 #define LCD_I2C_H_
 
 #define PCF8574_ADDR	0x4E		//Dirección del dispositivo:
-// PCF8574 es 0x20, desplazada una posición a la izq. es 0x40
-// PCF8574A es 0x38, desplzadad una posición a la izq. es 0x70
 
 #define LCD_RS			0x01		//Posición RS=0000 0001
 #define LCD_RW			0x02		//RW=0000 0010
