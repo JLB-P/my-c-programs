@@ -29,7 +29,7 @@ ISR (ADC_vect)
 	//4 cantidad de enteros,
 	//1 es la cantidad de decimales										
 	// Despliega los valores de las muestras del ADC al LCD
-	lcd_i2c_col_row(9,1);
+	lcd_i2c_col_row(5,2);
 	lcd_i2c_write_string(ascii_temp);
 	lcd_i2c_data(0xDF); //Caracter para indicar grados
 	lcd_i2c_write_string("C");

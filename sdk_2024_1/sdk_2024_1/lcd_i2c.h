@@ -9,6 +9,7 @@
 #ifndef LCD_I2C_H_
 #define LCD_I2C_H_
 
+//#define PCF8574_ADDR	0x70		//Dirección en Proteus
 #define PCF8574_ADDR	0x4E		//Dirección del dispositivo:
 
 #define LCD_RS			0x01		//Posición RS=0000 0001

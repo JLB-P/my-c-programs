@@ -10,8 +10,4 @@
 #define COMP_H_
 void init_analog_comp(void);
 
-
-
-
-
 #endif /* COMP_H_ */
